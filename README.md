@@ -13,7 +13,7 @@ Please log in into [my.nci.org.au](https://my.nci.org.au/mancini/) and join the 
 
 ### 2. Clone this repository 
 
-If you want to run the examples located in `helpix_tutorial/` clone this repository in Gadi (to be able to access the test data).
+If you want to run the examples located in `helpix_examples/` clone this repository in Gadi (to be able to access the test data).
 
 ```
 git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
