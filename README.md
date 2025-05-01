@@ -34,7 +34,7 @@ Here is the list of projects proposed by the Australian node. We encourage you t
 * Chasing Cyclones
 * Model intercomparison for extremes precipitation
 * Unravelling the representation of Tropical Convergence Zones in km-scale model runs
-* The relationship of cloud size and number with large-scale environment for precipitation in high-resolution models
+* [The relationship of cloud size and number with large-scale environment for precipitation in high-resolution models](https://github.com/21centuryweather/hk25-AusNode-LargeScaleP)
 * Diurnal cycle of coastal winds and rainfall
 * [Precipitation/soil moisture feedback: positive or negative?](https://github.com/21centuryweather/hk25-AusNode-land)
 * The hunt for city-driven atmospheric circulation
