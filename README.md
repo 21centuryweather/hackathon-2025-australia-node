@@ -13,7 +13,7 @@ Please log in into [my.nci.org.au](https://my.nci.org.au/mancini/) and join the 
 
 ### 2. Clone this repository 
 
-If you want to run the examples located in `helpix_examples/` clone this repository in Gadi (to be able to access the test data).
+If you want to run the examples located in `notebooks/` clone this repository in Gadi (to be able to access the **test data**).
 
 ```
 git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
@@ -21,7 +21,9 @@ git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
 
 ### 3. Use the correct conda environment
 
-Add instructions here
+A few extra package are needed to work with the healpix grid: [healpy](https://healpy.readthedocs.io/en/latest/) and [easygems.healpix](https://easy.gems.dkrz.de/Processing/index.html).  Because these packages are not available as part of the Analysis3 conda environment, we are going to use a specific environment during the hackarhon. 
+
+Instructions on how to use it comming soon!
 
 ## Projects 
 
