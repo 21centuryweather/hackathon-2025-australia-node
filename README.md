@@ -19,11 +19,84 @@ If you want to run the examples located in `notebooks/` clone this repository in
 git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
 ```
 
-### 3. Use the correct conda environment
+### 3. Use the correct python environment
 
-A few extra package are needed to work with the healpix grid: [healpy](https://healpy.readthedocs.io/en/latest/) and [easygems.healpix](https://easy.gems.dkrz.de/Processing/index.html).  Because these packages are not available as part of the Analysis3 conda environment, we are going to use a specific environment during the hackarhon. 
+To process the hackathon data, we need some extra `python` modules that aren't included in the standard `xp65 analysis3` conda environment. So a python virtual environment has been created to use for the hackathon. To use it, load the `xp65` conda environment as normal, but take care to load a **specific version** of analysis3:
 
-Instructions on how to use it comming soon!
+```
+module use /g/data/xp65/public/modules
+module load conda/analysis3-25.02
+```
+Now type the following to load the virtual environment.
+
+```
+source /g/data/nf33/public/hackathon-2025/venvs/hackathon_env/bin/activate
+```
+This should modify your `gadi` login prompt to
+
+```
+(hackathon_env) [<user-id>@gadi-login-0<username> ]$
+```
+You can test this virtual environment can load our required modules form the command line using `python` or `ipython`
+
+```python
+$ ipython
+/g/data/xp65/public/apps/med_conda/envs/analysis3-25.02/lib/python3.11/site-packages/IPython/core/interactiveshell.py:937: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+  warn(
+Python 3.11.11 | packaged by conda-forge | (main, Dec  5 2024, 14:17:24) [GCC 13.3.0]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.31.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import healpy as hp
+
+In [2]: import easygems.healpix as egh
+
+In [3]: 
+```
+> [!WARNING] 
+> If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
+
+### 4. Using this python environment inside an ARE jupyter session.
+
+To use this virtual environment inside an ARE jupyter notebook session, you must link the jupyter kernel to a local directory. Type the following commands at a gadi terminal.
+
+```
+cd ~/.local/share/jupyter/kernels/
+ln -s /g/data/nf33/public/hackathon-2025/venvs/hackathon_env/share/jupyter/kernels/hackathon_env
+```
+
+Now we can start up an ARE session. If you are unfamiliar with how to start an ARE notebook, follow [this link](https://access-hive.org.au/getting_started/are/).
+
+Make sure to choose `nf33` as your project for SU allocation. In the storage field, make sure to include:
+
+* `gdata/nf33` (to load the virtual environment)
+* `gdata/qx55` (where the km-scale simulations live)
+* `gdata/xp65` (to load the python analysis3 interpreter)
+
+in addition to other storage fields you will require for your work (e.g. `gdata/rt52` if you use ERA5 data).
+
+![ARE project](/images/ARE_project_storage.png){ width=70% }
+
+Now click on the advanced options, and specify the **Module directories** and **Modules** fields as set out below.
+
+> [!NOTE] 
+> This is slightly different to loading other conda environments into the ARE you may have used previously.
+
+![ARE options](/images/ARE_advanced_options.png)
+
+When the ARE session has loaded, make sure to check the Jupyter path points to the `xp65` `analysis3-25.0.2d` directory.
+
+![ARE session](/images/ARE_session.png)
+
+Inside the notebook, click on the kernel selection pull down menu in the top right corner.
+
+![ARE select](/images/ARE_kernel_select.png)
+
+Of the available options, select **'hackathon_kernal'**
+
+![ARE pulldown](/images/ARE_kernel_pulldown.png)
+
+Happy hacking!
 
 ## Projects 
 
