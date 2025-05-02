@@ -75,26 +75,27 @@ Make sure to choose `nf33` as your project for SU allocation. In the storage fie
 
 in addition to other storage fields you will require for your work (e.g. `gdata/rt52` if you use ERA5 data).
 
-![ARE project](/images/ARE_project_storage.png){ width=70% }
+<img src="images/ARE_project_storage.png" style="width:50%; height:auto;">
+
 
 Now click on the advanced options, and specify the **Module directories** and **Modules** fields as set out below.
 
 > [!NOTE] 
 > This is slightly different to loading other conda environments into the ARE you may have used previously.
 
-![ARE options](/images/ARE_advanced_options.png)
+<img src="images/ARE_advanced_options.png" style="width:50%; height:auto;">
 
 When the ARE session has loaded, make sure to check the Jupyter path points to the `xp65` `analysis3-25.0.2d` directory.
 
-![ARE session](/images/ARE_session.png)
+<img src="images/ARE_session.png" style="width:50%; height:auto;">
 
 Inside the notebook, click on the kernel selection pull down menu in the top right corner.
 
-![ARE select](/images/ARE_kernel_select.png)
+<img src="images/ARE_kernel_select.png" style="width:50%; height:auto;">
 
 Of the available options, select **'hackathon_kernal'**
 
-![ARE pulldown](/images/ARE_kernel_pulldown.png)
+<img src="images/ARE_kernel_pulldown.png" style="width:50%; height:auto;">
 
 Happy hacking!
 
