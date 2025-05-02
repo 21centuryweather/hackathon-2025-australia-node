@@ -21,7 +21,7 @@ git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
 
 ### 3. Use the correct python environment
 
-To process the hackathon data, we need some extra `python` modules that aren't included in the standard `xp65 analysis3` conda environment. So a python virtual environment has been created to use for the hackathon. To use it, load the `xp65` conda environment as normal, but take care to specify a **specific version** of analysis3:
+To process the hackathon data, we need some extra `python` modules that aren't included in the standard `xp65 analysis3` conda environment. So a python virtual environment has been created to use for the hackathon. To use it, load the `xp65` conda environment as normal, but take care to load a **specific version** of analysis3:
 ```
 module use /g/data/xp65/public/modules
 module load conda/analysis3-25.02
@@ -49,7 +49,8 @@ In [2]: import easygems.healpix as egh
 
 In [3]: 
 ```
-> [!WARNING] If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
+> [!WARNING] 
+> If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
 
 ### 4. Using this python environment inside an ARE jupyter session.
 
@@ -61,11 +62,37 @@ ln -s /g/data/nf33/public/hackathon-2025/venvs/hackathon_env/share/jupyter/kerne
 
 Now we can start up an ARE session. If you are unfamiliar with how to start an ARE notebook, follow [this link](https://access-hive.org.au/getting_started/are/).
 
+Make sure to choose `nf33` as your project for SU allocation. In the storage field, make sure to include
+* `gdata/nf33` (to load the virtual environment)
+* `gdata/qx55` (where the km-scale simulations live)
+* `gdata/xp65` (to load the python analysis3 interpreter)
+
+in addition to other storage fields you will require for your work (e.g. `gdata/rt52`)
+
 ![ARE project](/images/ARE_project_storage.png)
+
+Now click on the advanced options, and specify the **Module directories** and **Modules** fields as set out below.
+
+:::{note}
+
+This is slightly different to loading other conda environments into the ARE you may have used previously.
+:::
+
 ![ARE options](/images/ARE_advanced_options.png)
+
+When the ARE session has loaded, make sure to check the Jupyter path points to the `xp65` `analysis3-25.0.2d` directory.
+
 ![ARE session](/images/ARE_session.png)
+
+Inside the notebook, click on the kernel selection pull down menu in the top right corner.
+
 ![ARE select](/images/ARE_kernel_select.png)
+
+Of the available options, select **'hackathon_kernal'**
+
 ![ARE pulldown](/images/ARE_kernel_pulldown.png)
+
+Happy hacking!
 
 ## Projects 
 
