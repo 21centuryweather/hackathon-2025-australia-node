@@ -73,10 +73,8 @@ in addition to other storage fields you will require for your work (e.g. `gdata/
 
 Now click on the advanced options, and specify the **Module directories** and **Modules** fields as set out below.
 
-:::{note}
-
-This is slightly different to loading other conda environments into the ARE you may have used previously.
-:::
+> [!NOTE] 
+> This is slightly different to loading other conda environments into the ARE you may have used previously.
 
 ![ARE options](/images/ARE_advanced_options.png)
 
