@@ -7,7 +7,7 @@ This repository includes the instructions to meet all the technical requirements
 Please log in into [my.nci.org.au](https://my.nci.org.au/mancini/) and join the following projects:
 
 * `nf33` (for computations)
-* `qx55` (where the km-scale simulations live)
+* `qx55` (where the km-scale simulations live. Check [the available simulations here](/available_simulations.md))
 * `xp65` (to access the conda environment, see below)
 * and any other project you think you will need. For example, join `rt52` if you are going to use ERA5 data.
 
