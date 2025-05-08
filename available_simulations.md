@@ -1,7 +1,9 @@
 # Available km-scale simulation on `qx55`
 
 > [!NOTE] 
-> Not all variables may be available. Zarr stores will be filled in as the simulation data becomes avialable.
+> Not all variables may be available. Zarr stores will be filled in as the simulation data becomes available.
+
+Check [this page](https://digital-earths-global-hackathon.github.io/hosting/technical/data_request.html) to read about the metadata of the simulation and variable names. 
 
 ## um_glm_n2560_RAL3
 
@@ -232,3 +234,5 @@ Location and list of variables (for each zoom level):
     │   └── z_mc
 ```
 </details>
+
+
