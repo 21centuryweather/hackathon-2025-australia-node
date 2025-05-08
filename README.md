@@ -53,6 +53,9 @@ In [2]: import easygems.healpix as egh
 
 In [3]: 
 ```
+> [!NOTE]
+> If you are working inside an ARE VDI Desktop, you need to run `ssh localhost` and your password before running the above commands. This is because VDI runs using a container, and the `xp65` environment also uses a container. You can't run a container from inside another container.
+
 > [!WARNING] 
 > If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
 
