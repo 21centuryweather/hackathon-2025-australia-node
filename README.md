@@ -56,16 +56,16 @@ In [3]:
 > [!WARNING] 
 > If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
 
-### 4. Using this python environment inside an ARE jupyter session.
+### 4. Using this python environment inside an ARE JupyterLab session.
 
-To use this virtual environment inside an ARE jupyter notebook session, you must link the jupyter kernel to a local directory. Type the following commands at a gadi terminal.
+To use this virtual environment inside an ARE Jupyter notebook session, you must link the jupyter kernel to a local directory. Type the following commands at a gadi terminal.
 
 ```
 cd ~/.local/share/jupyter/kernels/
 ln -s /g/data/nf33/public/hackathon-2025/venvs/hackathon_env/share/jupyter/kernels/hackathon_env
 ```
 
-Now we can start up an ARE session. If you are unfamiliar with how to start an ARE notebook, follow [this link](https://access-hive.org.au/getting_started/are/).
+Now we can start up an ARE session. If you are unfamiliar with how to start an ARE JupyterLab, follow [this link](https://access-hive.org.au/getting_started/are/).
 
 Make sure to choose `nf33` as your project for SU allocation. In the storage field, make sure to include:
 
