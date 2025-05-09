@@ -116,7 +116,7 @@ Here is the list of projects proposed by the Australian node. We encourage you t
 * [Evaluation of Meso-scale Degree of Organization of Convection](https://github.com/21centuryweather/hk25-AusNode-DOCmeso)
 * Chasing Cyclones
 * Model intercomparison for extremes precipitation
-* Unravelling the representation of Tropical Convergence Zones in km-scale model runs
+* [Unravelling the representation of Tropical Convergence Zones in km-scale model runs](https://github.com/21centuryweather/hk25-AusNode-TConvZones)
 * [The relationship of cloud size and number with large-scale environment for precipitation in high-resolution models](https://github.com/21centuryweather/hk25-AusNode-LargeScaleP)
 * [Diurnal cycle of coastal winds and rainfall](https://github.com/21centuryweather/hk25-AusNode-coastal)
 * [Precipitation/soil moisture feedback: positive or negative?](https://github.com/21centuryweather/hk25-AusNode-land)
