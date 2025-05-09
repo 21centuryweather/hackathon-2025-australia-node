@@ -56,6 +56,9 @@ In [3]:
 > [!NOTE]
 > If you are working inside an ARE VDI Desktop, you need to run `ssh localhost` and your password before running the above commands. This is because VDI runs using a container, and the `xp65` environment also uses a container. You can't run a container from inside another container.
 
+> [!NOTE]
+> The `xp65` python environment is run using a `bash` 
+
 > [!WARNING] 
 > If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
 
@@ -80,8 +83,11 @@ in addition to other storage fields you will require for your work (e.g. `gdata/
 
 <img src="images/ARE_project_storage.png" style="width:50%; height:auto;">
 
+Now click on the **advanced settings** options.
 
-Now click on the advanced options, and specify the **Module directories** and **Modules** fields as set out below.
+<img src="images/ARE_advanced_settings.png" style="width:50%; height:auto;">
+
+Specify the **Module directories** and **Modules** fields as set out below.
 
 > [!NOTE] 
 > This is slightly different to loading other conda environments into the ARE you may have used previously.
