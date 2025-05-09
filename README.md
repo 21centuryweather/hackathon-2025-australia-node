@@ -113,7 +113,7 @@ Happy hacking!
 Here is the list of projects proposed by the Australian node. We encourage you to check them but also visit the [global hackathon website](https://digital-earths-global-hackathon.github.io/hk25/) to find other relevant projects and people working on similar topics. 
 
 * Towards enhancing climate projections through improved understanding and simulations of marine low clouds
-* Evaluation of Meso-scale Degree of Organization of Convection
+* [Evaluation of Meso-scale Degree of Organization of Convection](https://github.com/21centuryweather/hk25-AusNode-DOCmeso)
 * Chasing Cyclones
 * Model intercomparison for extremes precipitation
 * Unravelling the representation of Tropical Convergence Zones in km-scale model runs
