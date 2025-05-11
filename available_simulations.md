@@ -15,6 +15,7 @@ Check [this page](https://digital-earths-global-hackathon.github.io/hosting/tech
 * Time end: `2021-04-01T00:00:00`
 * Available frequencies: `PT1H` (2d variables) and `PT3H` (3d variables)
 * Zoom: `1` to `10`
+* [More information](https://github.com/digital-earths-global-hackathon/hk25/blob/main/content/models/um.md)
 
 Location and list of variables (for each zoom level):
 <details>
@@ -80,9 +81,10 @@ Location and list of variables (for each zoom level):
 * Time start: `2020-01-02T00:00:00`
 * Time end: `2021-03-01T00:00:00`
 * Available frequencies:
-  * Mean values: `P1D`, `PT6H` and `PT3H` 
-  * Point (instantaneous): `P1D`, `PT12`, `PT6H` and `PT3H` (available variables changes for each frequency)
-* Zoom: `0` to `11`
+  * Mean values: `P1D` and `PT3H` 
+  * Point (instantaneous): `P1D`, `PT3H` and `PT1H` (available variables changes for each frequency)
+* Zoom: `5` to `11
+* [More information](https://github.com/digital-earths-global-hackathon/hk25/blob/main/content/models/icon.md)
 
 Location and list of variables (for each zoom level):
 
@@ -91,8 +93,8 @@ Location and list of variables (for each zoom level):
   
 ```bash
 /g/data/qx55/german_node/
-├── d3hp003.zarr
-    ├── [P1D, PT3H, PT6H]_mean_z*_atm.zarr
+└── d3hp003.zarr
+    ├── P1D_mean_z*_atm.zarr
     │   ├── clivi
     │   ├── clt
     │   ├── clwvi
@@ -101,22 +103,22 @@ Location and list of variables (for each zoom level):
     │   ├── einvi
     │   ├── ekhvi
     │   ├── ekvvi
-    │   ├── hfls
-    │   ├── hfss
+    │   ├── hflsd
+    │   ├── hfssd
     │   ├── hur
     │   ├── hus
-    │   ├── hydro_fract_snow_box
-    │   ├── hydro_weq_snow_box
-    │   ├── hydro_wtr_soil_sl_box
+    │   ├── huss
+    │   ├── mrso
     │   ├── o3vi
+    │   ├── orog
     │   ├── pr
-    │   ├── pres_msl
-    │   ├── pres_sfc
     │   ├── pressure
-    │   ├── prls
+    │   ├── pressure_rva
+    │   ├── prs
     │   ├── prw
+    │   ├── ps
+    │   ├── psl
     │   ├── qall
-    │   ├── qv2m
     │   ├── rlds
     │   ├── rldscs
     │   ├── rlus
@@ -129,12 +131,17 @@ Location and list of variables (for each zoom level):
     │   ├── rsuscs
     │   ├── rsut
     │   ├── rsutcs
-    │   ├── sic
+    │   ├── rva
+    │   ├── sftgif
+    │   ├── sftlf
+    │   ├── siconc
+    │   ├── sncvfa
     │   ├── soil_level
+    │   ├── swe
+    │   ├── ta
     │   ├── tas
     │   ├── tauu
     │   ├── tauv
-    │   ├── temp
     │   ├── tend_egpdynvi
     │   ├── tend_eincldvi
     │   ├── tend_eindynvi
@@ -145,13 +152,12 @@ Location and list of variables (for each zoom level):
     │   ├── tend_ekvdynvi
     │   ├── time
     │   ├── ts
-    │   ├── u
+    │   ├── ua
     │   ├── uas
-    │   ├── v
+    │   ├── va
     │   ├── vas
-    │   ├── vor
-    │   ├── wa_phy
-    │   └── z_mc
+    │   ├── wa
+    │   └── zg
     ├── P1D_point_z*_atm.zarr
     │   ├── crs
     │   ├── egpvi
@@ -160,34 +166,84 @@ Location and list of variables (for each zoom level):
     │   ├── ekvvi
     │   ├── hur
     │   ├── hus
+    │   ├── orog
     │   ├── pr
-    │   ├── pres_msl
     │   ├── pressure
+    │   ├── pressure_rva
+    │   ├── psl
     │   ├── qall
     │   ├── rlut
     │   ├── rsut
-    │   ├── temp
-    │   ├── time
-    │   ├── ts
-    │   ├── u
-    │   ├── uas
-    │   ├── v
-    │   ├── vas
-    │   ├── vor
-    │   ├── wa_phy
-    │   └── z_mc
-    ├── PT12H_point_z*_atm.zarr
-    │   ├── crs
-    │   ├── orog
+    │   ├── rva
     │   ├── sftgif
     │   ├── sftlf
-    │   └── time
+    │   ├── ta
+    │   ├── time
+    │   ├── ts
+    │   ├── ua
+    │   ├── uas
+    │   ├── va
+    │   ├── vas
+    │   ├── wa
+    │   └── zg
     ├── PT1H_point_z*_atm.zarr
     │   ├── crs
+    │   ├── orog
     │   ├── pr
-    │   ├── pres_msl
+    │   ├── psl
     │   ├── rlut
     │   ├── rsut
+    │   ├── sftgif
+    │   ├── sftlf
+    │   ├── time
+    │   ├── ts
+    │   ├── uas
+    │   └── vas
+    ├── PT3H_mean_z*_atm.zarr
+    │   ├── clivi
+    │   ├── clt
+    │   ├── clwvi
+    │   ├── crs
+    │   ├── hflsd
+    │   ├── hfssd
+    │   ├── huss
+    │   ├── mrso
+    │   ├── o3vi
+    │   ├── orog
+    │   ├── pr
+    │   ├── prs
+    │   ├── prw
+    │   ├── ps
+    │   ├── psl
+    │   ├── rlds
+    │   ├── rldscs
+    │   ├── rlus
+    │   ├── rlut
+    │   ├── rlutcs
+    │   ├── rsds
+    │   ├── rsdscs
+    │   ├── rsdt
+    │   ├── rsus
+    │   ├── rsuscs
+    │   ├── rsut
+    │   ├── rsutcs
+    │   ├── sftgif
+    │   ├── sftlf
+    │   ├── siconc
+    │   ├── sncvfa
+    │   ├── soil_level
+    │   ├── swe
+    │   ├── tas
+    │   ├── tauu
+    │   ├── tauv
+    │   ├── tend_egpdynvi
+    │   ├── tend_eincldvi
+    │   ├── tend_eindynvi
+    │   ├── tend_einradvi
+    │   ├── tend_eintmxvi
+    │   ├── tend_ekhdynvi
+    │   ├── tend_ekhtmxvi
+    │   ├── tend_ekvdynvi
     │   ├── time
     │   ├── ts
     │   ├── uas
@@ -198,40 +254,20 @@ Location and list of variables (for each zoom level):
     │   ├── einvi
     │   ├── ekhvi
     │   ├── ekvvi
+    │   ├── orog
     │   ├── pr
-    │   ├── pres_msl
     │   ├── pressure
+    │   ├── pressure_rva
+    │   ├── psl
     │   ├── rlut
     │   ├── rsut
+    │   ├── rva
+    │   ├── sftgif
+    │   ├── sftlf
     │   ├── time
     │   ├── ts
     │   ├── uas
-    │   ├── vas
-    │   └── vor
-    ├── PT6H_point_z*_atm.zarr
-    │   ├── crs
-    │   ├── egpvi
-    │   ├── einvi
-    │   ├── ekhvi
-    │   ├── ekvvi
-    │   ├── hur
-    │   ├── hus
-    │   ├── pr
-    │   ├── pres_msl
-    │   ├── pressure
-    │   ├── qall
-    │   ├── rlut
-    │   ├── rsut
-    │   ├── temp
-    │   ├── time
-    │   ├── ts
-    │   ├── u
-    │   ├── uas
-    │   ├── v
-    │   ├── vas
-    │   ├── vor
-    │   ├── wa_phy
-    │   └── z_mc
+    │   └── vas
 ```
 </details>
 
