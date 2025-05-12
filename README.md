@@ -120,5 +120,5 @@ Here is the list of projects proposed by the Australian node. We encourage you t
 * [The relationship of cloud size and number with large-scale environment for precipitation in high-resolution models](https://github.com/21centuryweather/hk25-AusNode-LargeScaleP)
 * [Diurnal cycle of coastal winds and rainfall](https://github.com/21centuryweather/hk25-AusNode-coastal)
 * [Precipitation/soil moisture feedback: positive or negative?](https://github.com/21centuryweather/hk25-AusNode-land)
-* The hunt for city-driven atmospheric circulation
+* [The hunt for city-driven atmospheric circulation](https://github.com/21centuryweather/hk25-CityCirc)
 * [Convectively-Coupled Systems in the Tropics as Simulated in Global Storm Resolving Models](https://github.com/21centuryweather/hk25-AusNode-ConvTrop)
