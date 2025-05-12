@@ -1,6 +1,6 @@
 # Working on your laptop (not on Gadi)
 
-If you want or need to work locally instead of in Gadi, you will need to setup a conda environment and relay on online data. We recommend you to develop the code using a low resolution version of the data (zoom 4 or 5) as bandwidth and RAM will be limited. 
+If you want or need to work locally instead of in Gadi, you will need to set up a conda environment and rely on online data. We recommend you to develop the code using a low resolution version of the data (zoom 3) as bandwidth and RAM will be limited. 
 
 ## Conda environment
 
@@ -22,7 +22,7 @@ conda activate NAME
 
 ## Online data
 
-A few nodes have put some of the data available online, including some of the simulations, observations and reanalysis. The best way to get the list of available data is by checking the [intake catalog](https://digital-earths-global-hackathon.github.io/catalog/) for the hackathon.
+A few nodes have made some of the data available online, including some of the simulations, observations and reanalysis. The best way to get the list of available data is by checking the [intake catalog](https://digital-earths-global-hackathon.github.io/catalog/) for the hackathon.
 
 ```
 import intake
