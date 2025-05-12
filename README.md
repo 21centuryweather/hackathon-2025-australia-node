@@ -110,6 +110,8 @@ Happy hacking!
 
 ## 5. Emergency updates!
 
+### 5.1 For researchers with hh5 membership.
+
 As a temporary work-around from the current the disk failure, you can use the following commands to load a python environment if you are a member of `hh5`.
 ```
 module use /g/data/hh5/public/modules
@@ -128,6 +130,23 @@ Start an ARE session with the following storage parameters.
 Use the following advanced settings
 
 <img src="images/HH5-ARE-advanced-settings.png" style="width:50%; height:auto;">
+
+### 5.2 For researchers without hh5 membership,
+
+To use a copy of the digital earth conda environment installed on gadi, link this new  juypyter kernel to your local directory.
+```
+cd ~/.local/share/jupyter/kernels/
+ln -s /scratch/nf33/public/digital_earths_venv/share/jupyter/kernels/digital_earths_venv
+```
+Start an ARE session with the following storage parameters.
+
+<img src="images/NF33-ARE_project_storage.png" style="width:50%; height:auto;">
+
+Use the following advanced settings
+
+<img src="images/NF33-ARE-advanced-settings.png" style="width:50%; height:auto;">
+
+If you want to use this environment outside of an ARE session (i.e. via direct ssh session from the command line) you may need to install conda locally on gadi.
 
 ## Projects 
 
