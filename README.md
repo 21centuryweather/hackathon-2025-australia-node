@@ -108,6 +108,27 @@ Of the available options, select **'hackathon_kernal'**
 
 Happy hacking!
 
+## 5. Emergency updates!
+
+As a temporary work-around from the current the disk failure, you can use the following commands to load a python environment if you are a member of `hh5`.
+```
+module use /g/data/hh5/public/modules
+module load conda/analysis3
+source /scratch/nf33/public/hackathon_env/bin/activate
+```
+To use this environment in an ARE session, link the juypyter kernel to your local directory.
+```
+cd ~/.local/share/jupyter/kernels/
+ln -s /scratch/nf33/public/hackathon_env/share/jupyter/kernels/hackathon_env/
+```
+Start an ARE session with the following storage parameters.
+
+<img src="images/HH5-ARE_project_storage.png" style="width:50%; height:auto;">
+
+Use the following advanced settings
+
+<img src="images/HH5-ARE-advanced-settings.png" style="width:50%; height:auto;">
+
 ## Projects 
 
 Here is the list of projects proposed by the Australian node. We encourage you to check them but also visit the [global hackathon website](https://digital-earths-global-hackathon.github.io/hk25/) to find other relevant projects and people working on similar topics. 
