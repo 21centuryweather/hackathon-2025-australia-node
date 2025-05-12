@@ -10,10 +10,15 @@ Use the [`environment.yaml`](https://github.com/digital-earths-global-hackathon/
 1. Download the yaml file into your computer
 2. Run:
 
-```
+```python
 conda env create --name NAME --file path/to/environment.yaml
 ```
-3. Activate your new environment  
+3. Activate your new environment with
+
+```python
+conda activate NAME
+```
+
 
 ## Online data
 
@@ -24,6 +29,8 @@ import intake
 cat = intake.open_catalog("https://digital-earths-global-hackathon.github.io/catalog/catalog.yaml")["online"]
 list(cat)
 ```
+
+[Here is a nice example on how to work with the catalog and online data](https://github.com/digital-earths-global-hackathon/hk25-teams/blob/main/hk25-tutorials/simple_plot.ipynb).
 
 You can also check the list along with the URLs [in this yaml file](https://github.com/digital-earths-global-hackathon/catalog/blob/main/online/main.yaml).
 
