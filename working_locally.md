@@ -11,7 +11,7 @@ Use the [`environment.yaml`](https://github.com/digital-earths-global-hackathon/
 2. Run:
 
 ```python
-conda env create --name NAME --file path/to/environment.yaml
+conda env create --name heather --file path/to/environment.yaml
 ```
 3. Activate your new environment with
 
