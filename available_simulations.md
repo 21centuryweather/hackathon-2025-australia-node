@@ -92,7 +92,7 @@ Location and list of variables (for each zoom level):
   <summary>Expand list</summary>
   
 ```bash
-/g/data/qx55/german_node/
+/g/data/qx55/germany_node/
 └── d3hp003.zarr
     ├── P1D_mean_z*_atm.zarr
     │   ├── clivi
