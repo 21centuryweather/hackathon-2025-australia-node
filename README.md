@@ -74,7 +74,7 @@ Use the following **advanced settings:**
 
 * **Python or Conda virtual environment base**
 
-`/g/data/nf33/public/miniconda/`
+`/scratch/nf33/public/miniconda/`
 
 * **Conda environment**
 
