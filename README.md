@@ -8,7 +8,6 @@ Please log in into [my.nci.org.au](https://my.nci.org.au/mancini/) and join the 
 
 * `nf33` (for computations)
 * `qx55` (where the km-scale simulations live. Check [the available simulations here](/available_simulations.md))
-* `xp65` (to access the conda environment, see below)
 * and any other project you think you will need. For example, join `rt52` if you are going to use ERA5 data.
 
 ### 2. Clone this repository 
@@ -21,7 +20,7 @@ git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
 ## 3. Conda environment
 
 > [!WARNING] 
-> ARE sessions won't work if you include projects in gdata4 on the storage field (xp65, qx55, gd02, nf33, etc). 
+> ARE sessions won't work if you include projects in gdata4 on the storage field (xp65, gd02, nf33, etc). 
  
 ### 3.1 For researchers with hh5 membership.
 
