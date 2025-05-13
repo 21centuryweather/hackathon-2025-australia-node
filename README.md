@@ -53,9 +53,6 @@ Use the following **advanced settings:**
 
 <img src="images/HH5-ARE-advanced-settings.png" style="width:50%; height:auto;">
 
-> [!WARNING] 
-> If you fail to specify 'analysis3-25.02' your python session may exit with a segmentation fault when importing the easygems module.
-
 
 ### 3.2 For researchers without hh5 membership,
 
