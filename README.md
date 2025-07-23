@@ -6,8 +6,8 @@ This repository includes the instructions to meet all the technical requirements
 
 Please log in into [my.nci.org.au](https://my.nci.org.au/mancini/) and join the following projects:
 
-* `nf33` (for computations)
 * `qx55` (where the km-scale simulations live. Check [the available simulations here](/available_simulations.md))
+* `xp65` (to access the conda environment, see below)
 * and any other project you think you will need. For example, join `rt52` if you are going to use ERA5 data.
 
 ### 2. Clone this repository 
@@ -17,71 +17,83 @@ If you want to run the examples located in `notebooks/` clone this repository in
 ```
 git clone git@github.com:21centuryweather/hackathon-2025-australia-node.git
 ```
-## 3. Conda environment
+### 3. Conda environment
 
-> [!WARNING] 
-> ARE sessions won't work if you include projects in gdata4 on the storage field (xp65, gd02, nf33, etc). 
- 
-### 3.1 For researchers with hh5 membership.
-
-As a temporary work-around from the current the disk failure, you can use the following commands to load a python environment if you are a member of `hh5`.
+To process the hackathon data, we need some extra python modules that aren't included in the standard `xp65` analysis3 conda environment. So a python virtual environment has been created to use for the hackathon. To use it, load the `xp65` conda environment as normal, but take care to load a specific version of analysis3:
 ```
 module use /g/data/hh5/public/modules
-module load conda/analysis3
-source /scratch/nf33/public/hackathon_env/bin/activate
+module load conda/analysis3-25.02
 ```
+Now type the following to load the virtual environment.
+```
+source /g/data/gb02/public/venvs/hackathon_env/bin/activate
+```
+This should modify your gadi login prompt to
+```
+(hackathon_env) [<user-id>@gadi-login-0<username> ]$
+```
+You can test this virtual environment can load our required modules form the command line using python or ipython
+```
+$ python
+Python 3.11.11 | packaged by conda-forge | (main, Dec  5 2024, 14:17:24) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import healpy as hp
+>>> import easygems.healpix as egh
+```
+To use the correct version of `ipython`, type `python -m IPython`.
+```
+$ python -m IPython
+Python 3.11.11 | packaged by conda-forge | (main, Dec  5 2024, 14:17:24) [GCC 13.3.0]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 9.4.0 -- An enhanced Interactive Python. Type '?' for help.
+Tip: You can find how to type a Unicode symbol by back-completing it, eg `\Ⅷ<tab>` will expand to `\ROMAN NUMERAL EIGHT`.
+
+In [1]: import healpy as hp
+
+In [2]: import easygems.healpix as egh
+```
+
 To use this environment in an ARE session, link the juypyter kernel to your local directory.
 ```
 mkdir -p ~/.local/share/jupyter/kernels/
 cd ~/.local/share/jupyter/kernels/
-ln -s /scratch/nf33/public/hackathon_env/share/jupyter/kernels/hackathon_env/
+ln -s /g/data/gb02/public/venvs/hackathon_env/share/jupyter/kernels/hackathon_env/
 ```
-Start an ARE session with the following storage parameters.
+Start an ARE session with the storage parameters you need. Make sure to include
+* gdata/qx55 (where the km-scale simulations live)
+* gdata/xp65 (to load the python analysis3 interpreter)
+* gdata/gb02 (to load the hackathon virtual environment)
 
-<img src="images/HH5-ARE_project_storage.png" style="width:50%; height:auto;">
+in addition to other storage fields you will require for your work (e.g. gdata/rt52 if you use ERA5 data).
 
-Use the following **advanced settings:**
+<img src="images/ARE_project_storage.png" style="width:50%; height:auto;">
 
-* **Python or Conda virtual environment base**
+Now click on the **advanced settings:**
 
-`/g/data/hh5/public/apps/miniconda3/`
+<img src="images/ARE_advanced_settings.png" style="width:50%; height:auto;">
 
-* **Conda environment**
-
-`analysis3-24.04`
-
-<img src="images/HH5-ARE-advanced-settings.png" style="width:50%; height:auto;">
-
-
-### 3.2 For researchers without hh5 membership,
-
-To use a copy of the digital earth conda environment installed on gadi, link this new  juypyter kernel to your local directory.
-
-```
-mkdir -p ~/.local/share/jupyter/kernels/
-cd ~/.local/share/jupyter/kernels/
-ln -s /scratch/nf33/public/digital_earths_venv/share/jupyter/kernels/digital_earths_venv
-```
-Start an ARE session with the following storage parameters.
+Specify the **Module** directories and **Modules** fields as set out below.
 
 > [!NOTE] 
 > This is slightly different to loading other conda environments into the ARE you may have used previously.
 
-<img src="images/NF33-ARE_project_storage.png" style="width:50%; height:auto;">
+Use the following **advanced options:**
 
-Use the following **advanced settings:**
+<img src="images/ARE_advanced_options.png" style="width:50%; height:auto;">
 
-* **Python or Conda virtual environment base**
+When the ARE session has loaded, make sure to check the Jupyter path points to the xp65 analysis3-25.0.2d directory.
 
-`/scratch/nf33/public/miniconda/`
+<img src="images/ARE_session.png" style="width:50%; height:auto;">
 
-* **Conda environment**
+Inside the notebook, click on the kernel selection pull down menu in the top right corner.
 
-`digital_earths_env`
+<img src="images/ARE_kernel_select.png" style="width:50%; height:auto;">
 
-<img src="images/NF33-ARE-advanced-settings.png" style="width:50%; height:auto;">
+Of the available options (and yours may differ), select 'hackathon_kernal'
 
-If you want to use this environment outside of an ARE session (i.e. via direct ssh session from the command line) you may need to install conda locally on gadi.
+<img src="images/ARE_kernel_pulldown.png" style="width:50%; height:auto;">
+
+Happy coding!
 
 ## Projects 
 
